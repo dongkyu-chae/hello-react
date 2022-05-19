@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import React, { Component, Fragment } from "react";
+import MyComponent from "./MyComponent";
+import MyComponentClass from "./MyComponentClass";
+import CounterClass from "./CounterClass";
+import Say from "./Say";
+import EventPracticeClass from "./EventPracticeClass";
+import EventPractice from "./EventPractice";
+import IterationSample from "./IterationSample";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="react">
+        {/*<MyComponent name={111} children="aaa">
+          cccccchildren
+        </MyComponent>
+
+        <MyComponentClass name={222} children="bbb">
+          ddddddchildren
+        </MyComponentClass>
+
+    <CounterClass></CounterClass>*/}
+        <Say></Say>
+        <EventPractice name="dkchae" age={1234}>
+          ... is my children
+        </EventPractice>
+        <IterationSample></IterationSample>
+      </div>
+    );
+  }
 }
 
 export default App;
